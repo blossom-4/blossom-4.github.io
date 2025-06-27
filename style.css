@@ -1,5 +1,7 @@
   /*Brand*/
-  :root  {--brand: #AAC0E7;
+  @import url("https://fonts.googleapis.com/css2?family=Bad+Script&display=swap");
+  :root  {
+        --brand: #AAC0E7;
         --action: #273C75;
         --white: #F3F5F2;
         --base-light: #D3E9FD;
@@ -10,7 +12,7 @@
 html {
      box-sizing: border-box;
      font-size: 16px;
-     font-family: "bad-script", sans-serif;
+     font-family: "Bad Script", cursive;
      color: var(--black);
      scroll-behavior: smooth;
  }
@@ -26,7 +28,7 @@ html {
  h4,
  h5,
  h6 {
-     font-family: "bad-script", sans-serif;}
+     font-family: "Bad Script", cursive;}
  body,
  h1,
  h2,
@@ -45,8 +47,17 @@ html {
  ul {list-style: none;}
 
  img {
-     max-width: 100%;
-     height: auto;}
+    max-width: 100%;
+    height: 250px;      
+    object-fit: cover;           
+    border-radius: 8px;   
+    display: block;
+}
+
+.image:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+}
  input,
  button,
  textarea,
@@ -60,12 +71,10 @@ html {
 .space-between{
     justify-content:space-between;}
 .column{
-    flex-direction: column;;
+    display:flex;
     gap:20px}
 article .icon{
     width: 24px;}
-.icon{
-    width: 32px;}
 .padding-s{
     padding: 8px;}
 .padding-m{
@@ -78,6 +87,23 @@ article .icon{
 
 /* End Utility Clases */
 /* Header Styles */
+header {
+    background-color: var(--white);
+    padding: 32px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+header h1 {
+    font-size: 1.5rem;
+}
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+nav a {
+    text-decoration: none;
+    color: var(--action);
+}
 .button{
     padding: 12px 16px;
     display: inline-block;
@@ -87,25 +113,129 @@ article .icon{
     background-color: var(--action);
     transition: all 0.3s ease;
     max-width: 100px;}
+
+.button:hover {
+background-color: var(--base-dark);
+transform: scale(1.05);
+}
 /* End Header Styles */
 /* Hero Styles */
 .hero{
     background-color: var(--base-light);
     box-sizing: inherit;
     color: var(--base-dark);
-    padding:56;
+    padding:56px;
     margin:5px 10px;
     border-radius: 10px;
 }
 /* End Hero Styles */
  .icon{
+    width: 24px;
     max-height:100px;
     height:auto;
     display:flex;}
 
-    article {
+article {
+    flex: 1 1 300px;
+    max-width: 400px;
     background-color: var(--brand);
     margin:8px;
     border-radius: 10px;
     padding: 5%;
 }
+article p, article ul {
+    line-height: 1.6;
+    margin-top: 8px;
+}
+
+/* Landing page */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--white);
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Stamp Style */
+.stamp {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background-color: var(--base-light);
+  padding: 0.6rem 1.5rem;
+  border: 4px dotted var(--brand);
+  border-radius: 8px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  color: var(--black);
+  font-size: 1rem;
+  font-family: "Bad Script", cursive;
+  display: inline-block;
+  white-space: nowrap;
+  width: auto;
+  min-width: 220px;  /* ensures a longer horizontal shape */
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.stamp:hover {
+  transform: scale(1.05);
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* Stamp Style */
+
+/* Vertical Ribbon */
+.ribbon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 40px;
+  background-color: var(--brand);
+  transform: translateX(-50%);
+}
+
+.bow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  max-width: 80vw;
+  transform: translate(-50%, -50%);
+}
+
+/* Menu Buttons (Bottom Right) */
+.menu {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.menu button {
+  background-color: var(--base-light);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  color: var(--action);
+  font-family: inherit;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.menu button:hover {
+  background-color: var(--brand);
+  color: white;
+}
+/* End Landing Page*/
