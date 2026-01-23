@@ -146,23 +146,19 @@ nav a:hover {
 
 /* ===================== Hero ===================== */
 .hero {
+    padding: var(--space-lg) var(--space-md);
     background-color: var(--base-light);
-    color: var(--action);
-    padding: 64px 32px;
-    margin: 16px;
     border-radius: 12px;
-    text-align: center;
+    margin-top: var(--space-md);
 }
 
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 16px;
+.hero h2 {
+    margin-bottom: var(--space-sm);
+    color: var(--action);
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 24px;
-    line-height: 1.5;
+    max-width: 600px;
 }
 
 /* Fade-in Animation */
