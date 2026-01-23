@@ -225,56 +225,6 @@ article p {
     margin-bottom: var(--space-sm);
 }
 
-/* ===================== Landing Page & Container ===================== */
-body {
-    background-color: var(--white);
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-/* ===================== Stamp ===================== */
-.stamp {
-    position: absolute;
-    top: 2rem;
-    left: 2rem;
-    background-color: var(--base-light);
-    padding: 0.6rem 1.5rem;
-    border: 4px dotted var(--brand);
-    border-radius: 8px;
-    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.08);
-    text-decoration: none;
-    color: var(--black);
-    font-size: 1rem;
-    font-family: "Bad Script", cursive;
-    display: inline-block;
-    white-space: nowrap;
-    min-width: 220px;
-    text-align: center;
-    transition: transform 0.2s ease, box-shadow 0.3s ease;
-}
-
-.stamp:hover {
-    transform: scale(1.05);
-    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.12);
-}
-
-/* ===================== Ribbon (Optional / Minimal) ===================== */
-.ribbon {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 40px;
-    background-color: var(--brand);
-    transform: translateX(-50%);
-}
-
 /* ===================== Bottom Menu ===================== */
 .menu {
     position: absolute;
