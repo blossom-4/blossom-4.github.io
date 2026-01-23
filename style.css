@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
 :root {
+/*brand colours*/
     --brand: #AAC0E7;
     --action: #273C75;
     --action-dark: #1e2b55;
@@ -10,6 +11,17 @@
     --base-light: #D3E9FD;
     --base-dark: #555A6B;
     --black: #111111;
+/*typography scale*/
+    --text-sm: 0.9rem;
+    --text-base: 1rem;
+    --text-lg: 1.25rem;
+    --text-xl: 2rem;
+    --text-xxl: 2.75rem;
+/*spacing rhythm*/
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 32px;
+    --space-lg: 64px;
 }
 
 /* ===================== Global Styles ===================== */
@@ -21,20 +33,39 @@ html {
     scroll-behavior: smooth;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
-body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
     margin: 0;
     padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "Bad Script", cursive;
 }
 
-ol, ul { list-style: none; }
+ol,
+ul {
+    list-style: none;
+}
 
 img {
     max-width: 100%;
@@ -49,19 +80,49 @@ img:hover {
     transform: scale(1.03);
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
     font: inherit;
 }
 
-/* ===================== Utility Classes ===================== */
-.flex { display: flex; }
-.space-between { justify-content: space-between; }
-.column { display: flex; flex-direction: column; gap: 20px; }
+.section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 96px 24px;
+}
 
-.padding-s { padding: 8px; }
-.padding-m { padding: 16px; }
-.padding-l { padding: 32px; }
-.padding-xl { padding: 64px; }
+/* ===================== Utility Classes ===================== */
+.flex {
+    display: flex;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.padding-s {
+    padding: 8px;
+}
+
+.padding-m {
+    padding: 16px;
+}
+
+.padding-l {
+    padding: 32px;
+}
+
+.padding-xl {
+    padding: 64px;
+}
 
 /* ===================== Header ===================== */
 header {
@@ -73,7 +134,9 @@ header {
     justify-content: space-between;
 }
 
-header h1 { font-size: 1.8rem; }
+header h1 {
+    font-size: 1.8rem;
+}
 
 nav ul {
     display: flex;
@@ -87,7 +150,9 @@ nav a {
     transition: color 0.3s ease;
 }
 
-nav a:hover { color: var(--action-dark); }
+nav a:hover {
+    color: var(--action-dark);
+}
 
 .button {
     padding: 12px 16px;
@@ -135,8 +200,16 @@ nav a:hover { color: var(--action-dark); }
     text-align: center;
 }
 
-.hero h1 { font-size: 2.5rem; margin-bottom: 16px; }
-.hero p { font-size: 1.2rem; margin-bottom: 24px; line-height: 1.5; }
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
 
 /* Fade-in Animation */
 .fade-in {
@@ -144,8 +217,12 @@ nav a:hover { color: var(--action-dark); }
     transform: translateY(20px);
     animation: fadeIn 0.8s forwards;
 }
+
 @keyframes fadeIn {
-    to { opacity: 1; transform: translateY(0); }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ===================== Project Cards ===================== */
@@ -156,19 +233,27 @@ article {
     margin: 16px;
     border-radius: 12px;
     padding: 5%;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 article:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-article p, article ul { line-height: 1.6; margin-top: 8px; }
+article p,
+article ul {
+    line-height: 1.6;
+    margin-top: 8px;
+}
 
 /* ===================== Landing Page & Container ===================== */
-body { background-color: var(--white); margin: 0; padding: 0; }
+body {
+    background-color: var(--white);
+    margin: 0;
+    padding: 0;
+}
 
 .container {
     position: relative;
@@ -199,7 +284,7 @@ body { background-color: var(--white); margin: 0; padding: 0; }
 
 .stamp:hover {
     transform: scale(1.05);
-    box-shadow: 3px 5px 10px rgba(0,0,0,0.12);
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.12);
 }
 
 /* ===================== Ribbon (Optional / Minimal) ===================== */
@@ -232,7 +317,7 @@ body { background-color: var(--white); margin: 0; padding: 0; }
     color: var(--action);
     font-family: inherit;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
 
