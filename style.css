@@ -50,9 +50,13 @@ body {
 h1,
 h2,
 h3 {
-    font-weight: 600;
     line-height: 1.2;
     color: var(--action);
+}
+
+.site-title {
+    font-family: var(--font-display);
+    font-weight: 400;
 }
 
 h1 {
@@ -127,20 +131,6 @@ footer {
 }
 
 /* ===================== Header & Nav ===================== */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid var(--base-light);
-}
-
-nav ul {
-    display: flex;
-    gap: var(--space-md);
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
 
 nav a {
     font-size: var(--text-sm);
@@ -149,6 +139,10 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
+}
+
+header {
+    border-bottom: 1px solid var(--base-light);
 }
 
 /* ===================== Background ===================== */
@@ -187,129 +181,93 @@ nav a:hover {
     }
 }
 
-    /* ===================== Hero ===================== */
-    .hero {
-        padding: var(--space-lg) var(--space-md);
-        background-color: var(--base-light);
-        border-radius: 12px;
-        margin-top: var(--space-md);
-    }
+/* ===================== Hero ===================== */
+.hero {
+    padding: var(--space-lg) var(--space-md);
+    background-color: var(--base-light);
+    border-radius: 12px;
+    margin-top: var(--space-md);
+}
 
-    .hero h2 {
-        margin-bottom: var(--space-sm);
-        color: var(--action);
-    }
+.hero h2 {
+    margin-bottom: var(--space-sm);
+    color: var(--action);
+}
 
-    .hero p {
-        max-width: 600px;
-    }
+.hero p {
+    max-width: 600px;
+}
 
-    .fade-in {
-        opacity: 0;
-        transform: translateY(20px);
-        animation: fadeIn 0.8s forwards;
-    }
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s forwards;
+}
 
-    @keyframes fadeIn {
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
+}
 
-    /* ===================== Project Cards ===================== */
-    .projects-carousel {
-        overflow: hidden;
-        margin: 4rem auto;
-    }
+/* ===================== Project Cards ===================== */
+.projects-carousel {
+    overflow: hidden;
+    margin: 4rem auto;
+}
 
-    .carousel-track {
-        display: flex;
-        gap: 2rem;
-        transition: transform 0.6s ease;
-    }
+.carousel-track {
+    display: flex;
+    gap: 2rem;
+    transition: transform 0.6s ease;
+}
 
-    .project-slide {
-        min-width: 80%;
-        border-radius: 12px;
-    }
+.project-slide {
+    min-width: 80%;
+    border-radius: 12px;
+}
 
-    /* Pagination dots */
-    .carousel-dots {
-        display: flex;
-        justify-content: center;
-        gap: 8px;
-        margin-top: 1rem;
-    }
+/* Pagination dots */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 1rem;
+}
 
-    .carousel-dots button {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        border: none;
-        background: var(--base-light);
-    }
+.carousel-dots button {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background: var(--base-light);
+}
 
-    .carousel-dots button.active {
-        background: var(--action);
-    }
+.carousel-dots button.active {
+    background: var(--action);
+}
 
-    /* ===================== Footer ===================== */
+/* ===================== Footer ===================== */
 
-    footer {
-        margin-top: var(--space-lg);
-        border-top: 1px solid var(--base-light);
-        font-size: var(--text-sm);
-    }
+footer {
+    margin-top: var(--space-lg);
+    border-top: 1px solid var(--base-light);
+    font-size: var(--text-sm);
+}
 
-    footer nav ul {
-        gap: var(--space-sm);
-    }
+footer nav ul {
+    gap: var(--space-sm);
+}
 
-    .icon {
-        width: 24px;
-    }
+.icon {
+    width: 24px;
+}
 
-    /* ===================== Bottom Menu ===================== */
-    .menu {
-        position: absolute;
-        bottom: 2rem;
-        right: 2rem;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .menu button {
-        background-color: var(--base-light);
-        border: none;
-        padding: 0.6rem 1.2rem;
-        border-radius: 50px;
-        font-size: 1rem;
-        color: var(--action);
-        font-family: inherit;
-        cursor: pointer;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
-    }
-
-    .menu button:hover {
-        background-color: var(--brand);
-        color: white;
-    }
-
-    /* ===================== Responsive Flex Grid ===================== */
-    .projects-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 24px;
-    }
-
-    /* ===================== Utility Icons ===================== */
-    .icon {
-        width: 24px;
-        max-height: 100px;
-        height: auto;
-        display: flex;
-    }
+/* ===================== Utility Icons ===================== */
+.icon {
+    width: 24px;
+    max-height: 100px;
+    height: auto;
+    display: flex;
+}
