@@ -225,6 +225,22 @@ article p {
     margin-bottom: var(--space-sm);
 }
 
+/* ===================== Footer ===================== */
+
+footer {
+    margin-top: var(--space-lg);
+    border-top: 1px solid var(--base-light);
+    font-size: var(--text-sm);
+}
+
+footer nav ul {
+    gap: var(--space-sm);
+}
+
+.icon {
+    width: 24px;
+}
+
 /* ===================== Bottom Menu ===================== */
 .menu {
     position: absolute;
