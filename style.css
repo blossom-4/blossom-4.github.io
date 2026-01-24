@@ -22,6 +22,9 @@
     --space-sm: 16px;
     --space-md: 32px;
     --space-lg: 64px;
+    /*typography style*/
+    --font-display: "Sancreek", serif;
+    --font-body: "Rosario", sans-serif;
 }
 
 /* ===================== Global Styles ===================== */
@@ -38,12 +41,8 @@ html {
 }
 
 body {
-    margin: 0;
-    background-color: var(--white);
-    color: var(--black);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, sans-serif;
-    line-height: 1.6;
+    font-family: var(--font-body);
+    font-weight: 400;
 }
 
 /* ===================== Typography ===================== */
@@ -110,12 +109,22 @@ a {
 
 /* ===================== Layout Container ===================== */
 
+
 main,
 header,
 footer {
     max-width: 1100px;
     margin: 0 auto;
     padding: var(--space-md);
+}
+
+.site-title {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 8vw, 6rem);
+    letter-spacing: 0.08em;
+    /* skinnier feel */
+    font-weight: 400;
+    text-align: center;
 }
 
 /* ===================== Header & Nav ===================== */
