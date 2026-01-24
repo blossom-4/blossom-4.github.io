@@ -1,6 +1,4 @@
 /* ===================== Brand ===================== */
-@import url("https://fonts.googleapis.com/css2?family=Bad+Script&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
 
 :root {
     /*brand colours*/
@@ -25,6 +23,9 @@
     /*typography style*/
     --font-display: "Sancreek", serif;
     --font-body: "Rosario", sans-serif;
+    /*motions*/
+    --twinkle-speed: 6s;
+    --twinkle-brightness: 0.6;
 }
 
 /* ===================== Global Styles ===================== */
@@ -77,36 +78,6 @@ a {
 }
 
 /* ===================== Utility Classes ===================== */
-.flex {
-    display: flex;
-}
-
-.space-between {
-    justify-content: space-between;
-}
-
-.column {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.padding-s {
-    padding: 8px;
-}
-
-.padding-m {
-    padding: 16px;
-}
-
-.padding-l {
-    padding: 32px;
-}
-
-.padding-xl {
-    padding: 64px;
-}
-
 .top-bar {
     display: flex;
     justify-content: space-between;
@@ -180,144 +151,165 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* ===================== Background ===================== */
+@keyframes twinkle {
 
-/* ===================== Hero ===================== */
-.hero {
-    padding: var(--space-lg) var(--space-md);
-    background-color: var(--base-light);
-    border-radius: 12px;
-    margin-top: var(--space-md);
-}
+    0%,
+    100% {
+        opacity: 0.2;
+    }
 
-.hero h2 {
-    margin-bottom: var(--space-sm);
-    color: var(--action);
-}
-
-.hero p {
-    max-width: 600px;
-}
-
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 0.8s forwards;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    50% {
+        opacity: var(--twinkle-brightness);
     }
 }
 
-/* ===================== Project Section ===================== */
-
-.projects {
-    margin-top: var(--space-lg);
-}
-
-/* ===================== Project Cards ===================== */
-article {
-    display: grid;
-    grid-template-columns: 220px 1fr;
-    gap: var(--space-md);
-    background-color: var(--white);
-    border: 1px solid var(--base-light);
-    border-radius: 12px;
-    padding: var(--space-md);
-    margin-bottom: var(--space-md);
-    transition: box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-article:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-    transform: translateY(-2px);
-}
-
-article img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-article h2 {
-    margin-top: 0;
-    margin-bottom: var(--space-xs);
-}
-
-article ul {
-    padding-left: 16px;
-    margin: var(--space-xs) 0;
-}
-
-article li {
-    font-size: var(--text-sm);
-    color: var(--base-dark);
-}
-
-article p {
-    margin-top: var(--space-xs);
-    margin-bottom: var(--space-sm);
-}
-
-/* ===================== Footer ===================== */
-
-footer {
-    margin-top: var(--space-lg);
-    border-top: 1px solid var(--base-light);
-    font-size: var(--text-sm);
-}
-
-footer nav ul {
-    gap: var(--space-sm);
-}
-
-.icon {
-    width: 24px;
-}
-
-/* ===================== Bottom Menu ===================== */
-.menu {
+.star {
     position: absolute;
-    bottom: 2rem;
-    right: 2rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    width: 4px;
+    height: 4px;
+    background: var(--action);
+    clip-path: polygon(50% 0%,
+            60% 40%,
+            100% 50%,
+            60% 60%,
+            50% 100%,
+            40% 60%,
+            0% 50%,
+            40% 40%);
+    animation: twinkle var(--twinkle-speed) ease-in-out infinite;
 }
 
-.menu button {
-    background-color: var(--base-light);
-    border: none;
-    padding: 0.6rem 1.2rem;
-    border-radius: 50px;
-    font-size: 1rem;
-    color: var(--action);
-    font-family: inherit;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+@media (prefers-reduced-motion: reduce) {
+    .star {
+        animation: none;
+        opacity: 0.2;
+    }
 }
 
-.menu button:hover {
-    background-color: var(--brand);
-    color: white;
-}
+    /* ===================== Hero ===================== */
+    .hero {
+        padding: var(--space-lg) var(--space-md);
+        background-color: var(--base-light);
+        border-radius: 12px;
+        margin-top: var(--space-md);
+    }
 
-/* ===================== Responsive Flex Grid ===================== */
-.projects-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 24px;
-}
+    .hero h2 {
+        margin-bottom: var(--space-sm);
+        color: var(--action);
+    }
 
-/* ===================== Utility Icons ===================== */
-.icon {
-    width: 24px;
-    max-height: 100px;
-    height: auto;
-    display: flex;
-}
+    .hero p {
+        max-width: 600px;
+    }
+
+    .fade-in {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 0.8s forwards;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* ===================== Project Cards ===================== */
+    .projects-carousel {
+        overflow: hidden;
+        margin: 4rem auto;
+    }
+
+    .carousel-track {
+        display: flex;
+        gap: 2rem;
+        transition: transform 0.6s ease;
+    }
+
+    .project-slide {
+        min-width: 80%;
+        border-radius: 12px;
+    }
+
+    /* Pagination dots */
+    .carousel-dots {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 1rem;
+    }
+
+    .carousel-dots button {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        border: none;
+        background: var(--base-light);
+    }
+
+    .carousel-dots button.active {
+        background: var(--action);
+    }
+
+    /* ===================== Footer ===================== */
+
+    footer {
+        margin-top: var(--space-lg);
+        border-top: 1px solid var(--base-light);
+        font-size: var(--text-sm);
+    }
+
+    footer nav ul {
+        gap: var(--space-sm);
+    }
+
+    .icon {
+        width: 24px;
+    }
+
+    /* ===================== Bottom Menu ===================== */
+    .menu {
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .menu button {
+        background-color: var(--base-light);
+        border: none;
+        padding: 0.6rem 1.2rem;
+        border-radius: 50px;
+        font-size: 1rem;
+        color: var(--action);
+        font-family: inherit;
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .menu button:hover {
+        background-color: var(--brand);
+        color: white;
+    }
+
+    /* ===================== Responsive Flex Grid ===================== */
+    .projects-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+    }
+
+    /* ===================== Utility Icons ===================== */
+    .icon {
+        width: 24px;
+        max-height: 100px;
+        height: auto;
+        display: flex;
+    }
