@@ -195,14 +195,48 @@ footer {
     background: var(--action);
 }
 
+/* ===================================================== Buttons ===================================================== */
+.button {
+    display: inline-block;
+    margin-top: var(--space-sm);
+    padding: 10px 18px;
+    background-color: var(--action);
+    color: var(--white);
+    border-radius: 6px;
+    font-size: var(--text-sm);
+    font-weight: 500;
+}
+
+.button:hover {
+    background-color: var(--action-dark);
+    text-decoration: none;
+}
+
+/* ===================== Footer ===================== */
+
+footer {
+    border-top: 1px solid var(--base-light);
+    margin-top: var(--space-lg);
+    font-size: var(--text-sm);
+}
+
+footer nav ul {
+    display: flex;
+    gap: var(--space-sm);
+    list-style: none;
+    padding: 0;
+}
+
+.icon {
+    width: 24px;
+}
+
 /* ===================== Background ===================== */
 @keyframes twinkle {
-
     0%,
     100% {
         opacity: 0.2;
     }
-
     50% {
         opacity: var(--twinkle-brightness);
     }
@@ -229,30 +263,4 @@ footer {
         animation: none;
         opacity: 0.2;
     }
-}
-
-
-
-/* ===================== Footer ===================== */
-
-footer {
-    margin-top: var(--space-lg);
-    border-top: 1px solid var(--base-light);
-    font-size: var(--text-sm);
-}
-
-footer nav ul {
-    gap: var(--space-sm);
-}
-
-.icon {
-    width: 24px;
-}
-
-/* ===================== Utility Icons ===================== */
-.icon {
-    width: 24px;
-    max-height: 100px;
-    height: auto;
-    display: flex;
 }
