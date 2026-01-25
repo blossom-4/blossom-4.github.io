@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<script src="carousel.js"></script>
 
 <head>
     <meta charset="UTF-8">
@@ -11,16 +10,16 @@
 </head>
 
 <body>
-    <!-- Header / Navbar -->
-    <header class="top-bar">
-        <a href="#contact" class="contact-link">Contact</a>
-        <button class="menu-toggle" aria-label="Open menu">
-            <span></span>
-            <span></span>
-        </button>
-    </header>
+    <div class="page-container">
+        <!-- Header / Navbar -->
+        <header class="top-bar">
+            <a href="#contact" class="contact-link">Contact</a>
+            <button class="menu-toggle" aria-label="Open menu">
+                <span></span>
+                <span></span>
+            </button>
+        </header>
 
-    <main>
         <!-- Site Title -->
         <h1 class="site-title">Blossom * Herbison</h1>
 
@@ -37,7 +36,6 @@
             <!-- Projects Carousel -->
             <section id="projects" class="projects-carousel">
                 <div class="carousel-track">
-
                     <!-- Project 1 -->
                     <article class="project-slide">
                         <div class="project-image-wrapper">
@@ -80,13 +78,15 @@
                             </div>
                         </div>
                     </article>
+                </div>
 
-                    <!-- Pagination dots -->
-                    <div class="carousel-dots">
-                        <button class="active" aria-label="Project 1" data-index="0"></button>
-                        <button aria-label="Project 2" data-index="1"></button>
-                    </div>
+                <!-- Pagination dots -->
+                <div class="carousel-dots">
+                    <button class="active" aria-label="Project 1" data-index="0"></button>
+                    <button aria-label="Project 2" data-index="1"></button>
                 </div>
             </section>
+        </div>
 </body>
-</main>
+<script src="carousel.js"></script>
+</html>
