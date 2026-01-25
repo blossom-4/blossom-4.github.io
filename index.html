@@ -18,34 +18,53 @@
             <span></span>
         </button>
     </header>
-    
+
     <main>
+        <!-- Site Title -->
+        <h1 class="site-title">Blossom Herbison</h1>
+
         <!-- Hero Section -->
-            <h1 class="site-title">Blossom Herbison</h1>
+
 
         <!-- Projects Section -->
-        <section id="projects" class="projects">
-            <h2>Projects</h2>
-            <article>
-                <img src="image/project1.png" alt="Project 1 screenshot" />
-                <div>
+        <section id="projects" class="projects-carousel">
+            <div class="carousel-track">
+                <!-- Project 1 -->
+                <article class="project-slide">
+                    <img src="image/project1.png" alt="Screenshot of portfolio website" />
                     <h3>Portfolio Website</h3>
-                    <p>A responsive portfolio showcasing my technical skills, projects,
-                        and design thinking.</p>
+                    <p>
+                        A responsive portfolio showcasing technical skills, layout
+                        systems, and accessibility-first thinking.
+                    </p>
                     <ul>
-                        <li>Tech: HTML, CSS, JavaScript</li>
-                        <li>Focus: Accessibility, modern layout systems, interaction design</li>
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>Accessibility · Design systems · Interaction</li>
                     </ul>
-                    <a href="https://github.com/blossom-4/blossom-4.github.io" class="button">View Git Hub</a>
-                </div>
-            </article>
+                    <a href="https://github.com/blossom-4/blossom-4.github.io" class="button" target="_blank">View
+                        GitHub</a>
+                </article>
 
-            <article>
-                <img src="image/project2.png" alt="Screenshot of Raise the Case Homepage">
-                <h3>Personal Project - Raise the Case</h3>
-                <p>A community-driven justice platform where everyday people can review, debate, and judge real cases.
-                </p>
-            </article>
+                <!-- Project 2 -->
+                <article class="project-slide">
+                    <img src="image/project2.png" alt="Screenshot of Raise the Case homepage" />
+                    <h3>Raise the Case</h3>
+                    <p>
+                        A community-driven justice platform enabling users to review,
+                        debate, and judge real cases.
+                    </p>
+                    <ul>
+                        <li>Product ideation · UX · Frontend</li>
+                        <li>User trust · Moderation · Data ethics</li>
+                    </ul>
+                </article>
+            </div>
+
+            <!-- Pagination dots -->
+            <div class="carousel-dots">
+                <button class="active" aria-label="Project 1"></button>
+                <button aria-label="Project 2"></button>
+            </div>
         </section>
 </body>
 </main>
