@@ -162,16 +162,6 @@ footer {
     }
 }
 
-.hero {
-    background-color: var(--base-light);
-    border-radius: 12px;
-    padding: var(--space-lg) var(--space-md);
-    margin-bottom: var(--space-lg);
-}
-
-.hero p {
-    max-width: 600px;
-}
 
 /* ===================== About Image ===================== */
 .about-image-link {
@@ -211,7 +201,7 @@ footer {
 }
 
 .project-slide {
-    min-width: 80%;
+    min-width: 100%;
     background-color: var(--white);
     border-radius: 12px;
     padding: var(--space-md);
