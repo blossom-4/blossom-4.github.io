@@ -189,7 +189,6 @@ footer {
 .projects-carousel {
     background-color: var(--white);
     border-radius: 20px;
-    padding: var(--space-md);
     box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
     overflow: hidden;
 }
