@@ -128,11 +128,21 @@ footer {
 /* ===================== Site Title/Hero ===================== */
 .site-title {
     font-family: var(--font-display);
-    font-size: clamp(3rem, 8vw, 80%);
-    letter-spacing: 0.08em;
+    text-transform: uppercase;
     font-weight: 400;
+
+    font-size: clamp(2.6rem, 7vw, 6.2rem);
+    letter-spacing: 0.12em;
+    line-height: 1;
+
     text-align: center;
-    margin: var(--space-lg) 0 var(--space-md);
+    margin: 2rem auto 3rem;
+
+    white-space: nowrap;
+    transform: scaleY(1.06);
+
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
 .hero {
@@ -233,10 +243,12 @@ footer nav ul {
 
 /* ===================== Background ===================== */
 @keyframes twinkle {
+
     0%,
     100% {
         opacity: 0.2;
     }
+
     50% {
         opacity: var(--twinkle-brightness);
     }
