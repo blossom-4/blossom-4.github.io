@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<script src="carousel.js"></script>
 
 <head>
     <meta charset="UTF-8">
@@ -29,9 +30,7 @@
             <!-- About Image-->
             <a href="about.html" class="about-image-link">
                 <div class="about-image-frame">
-                <img src="image/bio_pic_2.jpg" 
-                alt="Portrait of Blossom Herbison" 
-                class="about-image" />
+                    <img src="image/bio_photo.jpg" alt="Portrait of Blossom Herbison" class="about-image" />
                 </div>
             </a>
 
@@ -42,11 +41,8 @@
                     <!-- Project 1 -->
                     <article class="project-slide">
                         <div class="project-image-wrapper">
-                            <img 
-                                src="image/github_website.png"
-                                alt="Screenshot of GitHub repositry for portfolio website" 
-                                class="project-image" 
-                            />
+                            <img src="image/github_website.png"
+                                alt="Screenshot of GitHub repositry for portfolio website" class="project-image" />
                             <div class="project-overlay">
                                 <h3>Portfolio Website</h3>
                                 <p>
@@ -57,9 +53,7 @@
                                     <li>HTML, CSS, JavaScript</li>
                                     <li>Accessibility · Design systems · Interaction</li>
                                 </ul>
-                                <a 
-                                    href="https://github.com/blossom-4/blossom-4.github.io"    
-                                    class="button"
+                                <a href="https://github.com/blossom-4/blossom-4.github.io" class="button"
                                     target="_blank">View GitHub
                                 </a>
                             </div>
@@ -69,34 +63,29 @@
                     <!-- Project 2 -->
                     <article class="project-slide">
                         <div class="project-image-wrapper">
-                            <img 
-                                src="image/raise_the_case.png" 
-                                alt="Screenshot of Raise the Case homepage" 
-                                class="project-image"
-                            />
+                            <img src="image/raise_the_case.png" alt="Screenshot of Raise the Case homepage"
+                                class="project-image" />
                             <div class="project-overlay">
                                 <h3>Raise the Case</h3>
                                 <p>
-                                A community-driven justice platform enabling users to review,
-                                debate, and judge real cases.
+                                    A community-driven justice platform enabling users to review,
+                                    debate, and judge real cases.
                                 </p>
                                 <ul>
                                     <li>Product ideation · UX · Frontend</li>
                                     <li>User trust · Moderation · Data ethics</li>
                                 </ul>
-                                <a 
-                                    href="#" 
-                                    class="button" 
-                                    target="_blank">View App
+                                <a href="#" class="button" target="_blank">View App
                                 </a>
                             </div>
                         </div>
-                </article>
+                    </article>
 
-                <!-- Pagination dots -->
-                <div class="carousel-dots">
-                    <button class="active" aria-label="Project 1"></button>
-                    <button aria-label="Project 2"></button>
+                    <!-- Pagination dots -->
+                    <div class="carousel-dots">
+                        <button class="active" aria-label="Project 1" data-index="0"></button>
+                        <button aria-label="Project 2" data-index="1"></button>
+                    </div>
                 </div>
             </section>
 </body>

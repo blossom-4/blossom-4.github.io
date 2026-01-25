@@ -194,6 +194,7 @@ footer {
 /* ===================== Project Carousel ===================== */
 .projects-carousel {
     height: 100%;
+    overflow: hidden;
 }
 
 .carousel-track {
