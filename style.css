@@ -238,6 +238,59 @@ footer {
     display: block;
 }
 
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    background: linear-gradient(to top,
+            rgba(39, 60, 117, 0.92),
+            rgba(39, 60, 117, 0.55),
+            rgba(39, 60, 117, 0.15));
+    color: var(--white);
+}
+
+.project-overlay h3 {
+    font-size: var(--text-lg);
+    margin-bottom: 0.25rem;
+    color: var(--white);
+}
+
+.project-overlay p {
+    font-size: var(--text-sm);
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+}
+
+.project-overlay ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--space-sm);
+    font-size: var(--text-sm);
+}
+
+.project-overlay li {
+    opacity: 0.9;
+}
+
+.project-overlay .button {
+    align-self: flex-start;
+    background-color: var(--white);
+    color: var(--action);
+    font-size: var(--text-sm);
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+}
+
+.project-overlay .button:hover {
+    background-color: var(--brand);
+    color: var(--white);
+}
+
 /* Pagination dots */
 .carousel-dots {
     display: flex;
