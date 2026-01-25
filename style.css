@@ -128,7 +128,7 @@ footer {
 /* ===================== Site Title/Hero ===================== */
 .site-title {
     font-family: var(--font-display);
-    font-size: clamp(3rem, 8vw, 6rem);
+    font-size: clamp(3rem, 8vw, 80%);
     letter-spacing: 0.08em;
     font-weight: 400;
     text-align: center;
