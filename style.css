@@ -225,6 +225,19 @@ footer {
     margin-bottom: var(--space-sm);
 }
 
+.project-image-wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 /* Pagination dots */
 .carousel-dots {
     display: flex;
