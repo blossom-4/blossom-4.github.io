@@ -202,9 +202,6 @@ footer {
 
 .project-slide {
     min-width: 100%;
-    background-color: var(--white);
-    border-radius: 12px;
-    padding: var(--space-md);
 }
 
 .project-slide img {
@@ -218,41 +215,43 @@ footer {
 .project-image-wrapper {
     position: relative;
     width: 100%;
+    aspect-ratio: 4/3;
     border-radius: 18px;
     overflow: hidden;
+    background-color: var(--base-light);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 .project-image {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
 }
 
 .project-overlay {
     position: absolute;
     inset: 0;
-    padding: var(--space-md);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-
+    padding: var(--space-md);
     background: linear-gradient(to top,
             rgba(39, 60, 117, 0.92),
             rgba(39, 60, 117, 0.55),
-            rgba(39, 60, 117, 0.15));
+            rgba(39, 60, 117, 0.1));
     color: var(--white);
 }
 
 .project-overlay h3 {
+    margin: 0 0 0.25rem;
     font-size: var(--text-lg);
-    margin-bottom: 0.25rem;
     color: var(--white);
 }
 
 .project-overlay p {
+    margin: 0 0 0.5rem;
     font-size: var(--text-sm);
-    line-height: 1.5;
-    margin-bottom: 0.5rem;
     color: var(--white);
 }
 
