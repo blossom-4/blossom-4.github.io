@@ -414,6 +414,47 @@ footer nav ul {
     width: 24px;
 }
 
+/* ===================== About Section ===================== */
+.about-section {
+    margin: var(--space-lg) 0;
+    padding: var(--space-md) 0;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+    align-items: center;
+}
+
+.about-text {
+    line-height: 1.8;
+}
+
+about-text p {
+    margin-bottom: var(--space-md);
+    font-size: var(--text-base);
+}
+
+.about-image {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
+}
+
 /* ===================== Background ===================== */
 @keyframes twinkle {
 
