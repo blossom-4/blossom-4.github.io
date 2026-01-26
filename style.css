@@ -98,47 +98,55 @@ a:hover {
 /* ===================== Social Icon Rail ===================== */
 .social-rail {
     position: fixed;
-    left: var(--space-md);
+    left: 24px;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
-    gap: var(--space-md);
+    gap: 18px;
     z-index: 100;
 }
 
 .social-rail a {
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+
+    background-color: var(--white);
+    color: var(--action);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.social-rail a i {
+    font-size: 1rem;
+}
+
+/* Hover */
+.social-rail a:hover {
     background-color: var(--action);
     color: var(--white);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
 }
 
-.social-rail a:hover {
-    transform: scale(1.1);
-    box-shadow: 0 4px 12px rgba(39, 60, 117, 0.3);
-    text-decoration: none;
-}
-
-.social-rail svg {
-    width: 20px;
-    height: 20px;
+/* Accessibility */
+.social-rail a:focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 4px;
 }
 
 @media (max-width: 768px) {
     .social-rail {
-        position: static;
-        transform: none;
-        flex-direction: row;
-        justify-content: center;
-        margin: var(--space-md) 0;
-        gap: var(--space-sm);
+        display: none;
     }
 }
 
@@ -370,7 +378,7 @@ a:hover {
     box-shadow: 0 0 0 4px rgba(39, 60, 117, 0.15);
 }
 
-/* ===================================================== Buttons ===================================================== */
+/* =================== Buttons ======================= */
 .button {
     display: inline-block;
     margin-top: var(--space-sm);
