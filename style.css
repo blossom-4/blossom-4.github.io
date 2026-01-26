@@ -431,7 +431,7 @@ footer nav ul {
     line-height: 1.8;
 }
 
-about-text p {
+.about-text p {
     margin-bottom: var(--space-md);
     font-size: var(--text-base);
 }
@@ -481,6 +481,63 @@ about-text p {
     font-weight: 500;
 }
 
+/* ===================== Contact Section ===================== */
+.contact-section {
+    margin: var(--space-lg) 0;
+    padding: var(--space-md) 0;
+}
+
+.contact-section h2 {
+    margin-bottom: var(--space-md);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+        max-width: 600px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid var(--base-light);
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: var(--black);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--action);
+    box-shadow: 0 0 0 3px rgba(170, 192, 231, 0.2);
+}
+.contact-form textarea {
+    resize: vertical;
+}
+
+.button {
+    padding: var(--space-sm) var(--space-md);
+    background-color: var(--action);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-size: var(--text-base);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: var(--action-dark);
+    transform: translateY(-2px);
+}
+
+.button:active {
+    transform: translateY(0);
+}
 
 /* ===================== Background ===================== */
 @keyframes twinkle {
