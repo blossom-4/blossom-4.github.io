@@ -455,6 +455,33 @@ about-text p {
     }
 }
 
+/* ===================== Skills Section ===================== */
+.skills-section {
+    margin: var(--space-lg) 0;
+    padding: var(--space-md) 0;
+}
+
+.skills-section h2 {
+    margin-bottom: var(--space-md);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--space-sm);
+}
+
+.skill {
+    padding: var(--space-sm) var(--space-md);
+    padding: var(--space-sm) var(--space-md);
+    background-color: var(--base-light);
+    color: var(--action);
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+}
+
+
 /* ===================== Background ===================== */
 @keyframes twinkle {
 
