@@ -49,10 +49,7 @@ body {
     font-family: var(--font-body);
     font-weight: 400;
     color: var(--black);
-    background-color: var(--white
-    
-    
-    );
+    background-color: var(--white);
     line-height: 1.6;
 }
 
@@ -206,7 +203,25 @@ a:hover {
 .about-image-link {
     display: block;
     width: 100%;
-    height: 100%
+    height: 100%;
+    position: relative;
+}
+
+.about-image-link::after {
+    content: "About";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    z-index: 5;
+    pointer-events: none;
 }
 
 .about-image-frame {
@@ -217,6 +232,17 @@ a:hover {
     overflow: hidden;
     background-color: var(--base-light);
     transition: transform 0.35s ease, box-shadow 0.35s ease;
+    position: relative;
+}
+
+.about-image-frame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(39, 60, 117, 0.5);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    z-index: 4;
 }
 
 .about-image {
@@ -231,6 +257,13 @@ a:hover {
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
 }
 
+.about-image-link:hover .about-image-frame::before {
+    opacity: 1;
+}
+
+.about-image-link:hover::after {
+    opacity: 1;
+}
 /* ===================== Project Carousel ===================== */
 .projects-carousel {
     height: 100%;
@@ -328,7 +361,7 @@ a:hover {
     position: absolute;
     bottom: 16px;
     left: 50%;
-    transform: translateX (-50%);
+    transform: translateX(-50%);
     z-index: 10;
     padding: 6px 14px;
     background: rgba(39, 60, 117, 0.35);
@@ -421,29 +454,10 @@ footer nav ul {
     font-size: var(--text-base);
 }
 
-.about-image {
-    display: flex;
-    justify-content: center;
-    row-span: 2;
-}
-
-.profile-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 18px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-}
-
-@media (max-width: 768px) {
-    .about-content {
-        grid-template-columns: 1fr;
-        gap: var(--space-md);
-    }
-}
 
 /* ===================== Skills Section ===================== */
 .skills-section {
-    margin: var(--space-md) 0;
+    margin: 0;
     padding: 0;
 }
 
@@ -466,6 +480,13 @@ footer nav ul {
     text-align: center;
     font-weight: 500;
     font-size: var(--text-sm);
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
 }
 
 /* ===================== Background ===================== */
