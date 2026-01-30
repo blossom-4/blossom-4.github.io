@@ -1,10 +1,12 @@
-/* ===================================================== Google Fonts ===================================================== */
+/* =====================================================
+   Google Fonts
+===================================================== */
 @import url("https://fonts.googleapis.com/css2?family=Sancreek&family=Rosario:wght@300;400;500&display=swap");
 
-/* ===================== Brand ===================== */
-
+/* =====================================================
+   Design Tokens
+===================================================== */
 :root {
-    /*brand colours*/
     --brand: #AAC0E7;
     --action: #273C75;
     --action-dark: #1e2b55;
@@ -12,51 +14,53 @@
     --base-light: #D3E9FD;
     --base-dark: #555A6B;
     --black: #111111;
-    /*typography scale*/
+
     --text-sm: 0.9rem;
     --text-base: 1rem;
     --text-lg: 1.25rem;
     --text-xl: 2rem;
     --text-xxl: 2.75rem;
-    /*spacing rhythm*/
+
     --space-xs: 8px;
     --space-sm: 16px;
     --space-md: 32px;
     --space-lg: 64px;
-    /*typography style*/
+
     --font-display: "Sancreek", serif;
     --font-body: "Rosario", sans-serif;
-    /*motions*/
-    --twinkle-speed: 6s;
-    --twinkle-brightness: 0.6;
 }
 
-/* ===================== Global Styles ===================== */
-html {
-    box-sizing: border-box;
-    font-size: 16px;
-    scroll-behavior: smooth;
-}
-
+/* =====================================================
+   Global Reset
+===================================================== */
 *,
-*:before,
-*:after {
-    box-sizing: inherit;
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
 }
 
 body {
     margin: 0;
     font-family: var(--font-body);
-    font-weight: 400;
     color: var(--black);
     background-color: var(--white);
     line-height: 1.6;
+
+    /* Prevent accidental scroll on desktop */
+    overflow-x: hidden;
 }
 
-/* ===================== Typography ===================== */
+/* =====================================================
+   Typography
+===================================================== */
 h1,
 h2,
 h3 {
+    margin: 0;
     line-height: 1.2;
     color: var(--action);
 }
@@ -74,6 +78,7 @@ h3 {
 }
 
 p {
+    margin: 0;
     font-size: var(--text-base);
     color: var(--base-dark);
 }
@@ -83,19 +88,18 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
-/* ===================== Layout Container ===================== */
-
+/* =====================================================
+   Page Container
+===================================================== */
 .page-container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: var(--space-md);
+    padding: var(--space-sm);
 }
 
-/* ===================== Social Icon Rail ===================== */
+/* =====================================================
+   Social Icon Rail
+===================================================== */
 .social-rail {
     position: fixed;
     left: 24px;
@@ -104,106 +108,97 @@ a:hover {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    z-index: 9999;
+    z-index: 1000;
 }
 
 .social-rail a {
     width: 48px;
     height: 48px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: var(--action);
-    text-decoration: none;
+    display: grid;
+    place-items: center;
     border-radius: 50%;
-    transition:
-        color 0.25s ease,
-        transform 0.25s ease;
+    color: var(--action);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.social-rail a i {
+.social-rail i {
     font-size: 2rem;
-    line-height: 1;
 }
 
-.social-rail a:hover,
-.social-rail a:focus-visible {
+.social-rail a:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 18px rgba(39, 60, 117, 0.25);
 }
 
-/* Hide on mobile */
-@media (max-width: 768px) {
-    .social-rail {
-        display: none;
-    }
-}
-/* ===================== Header & Nav ===================== */
-
-.top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
-}
-
 .menu-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
     background: none;
     border: none;
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
     cursor: pointer;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0;
+    z-index: 1001;
 }
 
 .menu-toggle span {
     width: 28px;
-    height: 2px;
-    background: var(--action);
-}
-
-/* ===================== Site Title ===================== */
-.site-title {
-    font-family: var(--font-display);
-    text-transform: uppercase;
-    font-weight: 400;
-    font-size: clamp(2.6rem, 7vw, 6.2rem);
-    letter-spacing: 0.10em;
-    line-height: 1;
-    margin: 4rem auto 4rem;
-    white-space: nowrap;
-    transform: scaleY(1.06);
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    overflow: hidden;
-    text-align: center;
-}
-
-/* ===================== Hero ===================== */
-
-.intro-layout {
-    display: grid;
-    grid-template-columns: 320px 1fr;
-    align-items: stretch;
-    gap: var(--space-lg);
-    margin: 0 auto var(--space-lg);
+    height: 3px;
+    background-color: var(--action);
+    border-radius: 2px;
+    transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {
-    .intro-layout {
-        grid-template-columns: 1fr;
-        gap: var(--space-md);
+    .social-rail {
+        display: none;
+    }
+    
+    .menu-toggle {
+        display: flex;
     }
 }
 
+/* =====================================================
+   Site Title
+===================================================== */
+.site-title {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-align: center;
+    white-space: nowrap;
 
-/* ===================== About Image ===================== */
+    font-size: clamp(2.6rem, 7vw, 6rem);
+    margin-top: clamp(2.5rem, 6vh, 4rem);
+    margin-bottom: clamp(2rem, 5vh, 3.5rem);
+
+    line-height: 1;
+}
+
+/* =====================================================
+   Intro Layout (Hero)
+===================================================== */
+.intro-layout {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: clamp(2rem, 4vw, 4rem);
+    align-items: start;
+
+    /* Important: prevent viewport stretching */
+    margin-bottom: var(--space-lg);
+}
+
+/* =====================================================
+   About Image
+===================================================== */
 .about-image-link {
     display: block;
-    width: 100%;
-    height: 100%;
     position: relative;
 }
 
@@ -227,11 +222,10 @@ a:hover {
 .about-image-frame {
     width: 100%;
     aspect-ratio: 1 / 1;
-    height: 100%;
+    max-height: 360px;
     border-radius: 18px;
     overflow: hidden;
-    background-color: var(--base-light);
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    background: var(--base-light);
     position: relative;
 }
 
@@ -249,7 +243,6 @@ a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
 }
 
 .about-image-link:hover .about-image-frame {
@@ -264,109 +257,98 @@ a:hover {
 .about-image-link:hover::after {
     opacity: 1;
 }
-/* ===================== Project Carousel ===================== */
+
+/* =====================================================
+   Projects Carousel
+===================================================== */
 .projects-carousel {
-    height: 100%;
-    display: flex;
-    flex-direction:column;
-    justify-content: flex-start;
-    overflow: hidden;
     position: relative;
+    max-height: 360px;
+    overflow: hidden;
 }
 
 .carousel-track {
     display: flex;
-    gap: 2rem;
     transition: transform 0.6s ease;
-    height: 100%;
-    width: 100%;
-    position: relative;
 }
 
 .project-slide {
     min-width: 100%;
-    height: 100%;
 }
 
 .project-image-wrapper {
-    position: relative;
-    width: 100%;
-    height:100%;
+    height: 360px;
     border-radius: 18px;
     overflow: hidden;
-    background-color: var(--base-light);
+    position: relative;
+    background: var(--base-light);
 }
 
 .project-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
 }
 
+/* =====================================================
+   Project Overlay
+===================================================== */
 .project-overlay {
     position: absolute;
     inset: 0;
+    padding: var(--space-md);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: var(--space-md);
-    background: rgba(85, 90, 107, 0.85);
+
+    background: linear-gradient(to top,
+            rgba(39, 60, 117, 0.85),
+            rgba(39, 60, 117, 0.55),
+            rgba(39, 60, 117, 0.15));
+
     color: var(--white);
 }
 
-.project-overlay h3 {
-    margin: 0 0 0.25rem;
-    font-size: var(--text-lg);
-    color: var(--white);
-}
-
-.project-overlay p {
-    margin: 0 0 0.5rem;
-    font-size: var(--text-sm);
+.project-overlay h3,
+.project-overlay p,
+.project-overlay li {
     color: var(--white);
 }
 
 .project-overlay ul {
     list-style: none;
     padding: 0;
-    margin: 0 0 var(--space-sm);
+    margin: var(--space-xs) 0 var(--space-sm);
     font-size: var(--text-sm);
 }
 
-.project-overlay li {
-    opacity: 0.9;
-}
-
-.project-overlay .button {
+/* =====================================================
+   Buttons
+===================================================== */
+.button {
+    margin-top: auto;
     align-self: flex-start;
-    background-color: var(--white);
+    padding: 0.5rem 1.25rem;
+    background: var(--white);
     color: var(--action);
-    font-size: var(--text-sm);
-    padding: 0.5rem 1rem;
     border-radius: 999px;
+    font-size: var(--text-sm);
 }
 
-.project-overlay .button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.16);
-}
-
-
-/* Pagination dots */
+/* =====================================================
+   Pagination Dots
+===================================================== */
 .carousel-dots {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
     position: absolute;
-    bottom: 16px;
+    bottom: 14px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 10;
+    display: flex;
+    gap: 12px;
     padding: 6px 14px;
+    border-radius: 999px;
     background: rgba(39, 60, 117, 0.35);
     backdrop-filter: blur(6px);
-    border-radius: 999px;
 }
 
 .carousel-dots button {
@@ -374,62 +356,15 @@ a:hover {
     height: 10px;
     border-radius: 999px;
     border: none;
-
-    background-color: rgba(255, 255, 255, 0.55);
+    background: rgba(255, 255, 255, 0.55);
     cursor: pointer;
-
-    transition:
-        width 0.35s ease,
-        background-color 0.35s ease,
-        opacity 0.35s ease;
-
-    opacity: 0.6;
-}
-
-.carousel-dots button:hover {
-    opacity: 0.9;
+    transition: width 0.35s ease, opacity 0.35s ease;
 }
 
 .carousel-dots button.active {
     width: 28px;
-    background-color: var(--white);
+    background: var(--white);
     opacity: 1;
-}
-
-/* =================== Buttons ======================= */
-.button {
-    display: inline-block;
-    margin-top: var(--space-sm);
-    padding: 10px 18px;
-    background-color: var(--action);
-    color: var(--white);
-    border-radius: 6px;
-    font-size: var(--text-sm);
-    font-weight: 500;
-}
-
-.button:hover {
-    background-color: var(--action-dark);
-    text-decoration: none;
-}
-
-/* ===================== Footer ===================== */
-
-footer {
-    border-top: 1px solid var(--base-light);
-    margin-top: var(--space-lg);
-    font-size: var(--text-sm);
-}
-
-footer nav ul {
-    display: flex;
-    gap: var(--space-sm);
-    list-style: none;
-    padding: 0;
-}
-
-.icon {
-    width: 24px;
 }
 
 /* ===================== About Section ===================== */
@@ -453,7 +388,6 @@ footer nav ul {
     margin-bottom: var(--space-sm);
     font-size: var(--text-base);
 }
-
 
 /* ===================== Skills Section ===================== */
 .skills-section {
@@ -489,38 +423,22 @@ footer nav ul {
     }
 }
 
-/* ===================== Background ===================== */
-@keyframes twinkle {
-
-    0%,
-    100% {
-        opacity: 0.2;
+/* =====================================================
+   Responsive (Mobile)
+===================================================== */
+@media (max-width: 768px) {
+    .intro-layout {
+        grid-template-columns: 1fr;
     }
 
-    50% {
-        opacity: var(--twinkle-brightness);
+    .projects-carousel,
+    .project-image-wrapper,
+    .about-image-frame {
+        max-height: none;
+        height: auto;
     }
-}
 
-.star {
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: var(--action);
-    clip-path: polygon(50% 0%,
-            60% 40%,
-            100% 50%,
-            60% 60%,
-            50% 100%,
-            40% 60%,
-            0% 50%,
-            40% 40%);
-    animation: twinkle var(--twinkle-speed) ease-in-out infinite;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .star {
-        animation: none;
-        opacity: 0.2;
+    body {
+        overflow-y: auto;
     }
 }
