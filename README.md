@@ -23,7 +23,7 @@ This portfolio demonstrates a thoughtful approach to web design with a focus on 
 **Acknowledgement of Country Landing Page**
 - Dedicated landing experience honoring Traditional Custodians
 - Black background with modern typography
-- Call-to-action to enter the portfolio
+- Button to enter the portfolio
 
 **Responsive Breakpoints**
 - Optimized for phones 400px and above (stacked title)
@@ -54,18 +54,17 @@ This portfolio demonstrates a thoughtful approach to web design with a focus on 
 
 ```
 ├── acknowledge/
-│   └── index.html      # Acknowledgement of Country landing page
+│   ├──  index.html      # Acknowledgement of Country
+│   └── landing.css         # Landing page styling 
 ├── portfolio/
 │   ├── index.html      # Main portfolio page
 │   ├── about.html      # About page with skills section
 │   ├── style.css       # Portfolio styling
-│   ├── carousel.js     # Interactive carousel functionality
+│   ├── carousel.js     # Interactive carousel 
 │   ├── social-rail.js  # Mobile scroll behavior
 │   └── image/          # Project screenshots and assets
-├── landing.css         # Landing page styling
-├── README.md           # This file
-└── ...other assets
-```
+└── README.md           # This file
+
 
 ## Key Components
 
