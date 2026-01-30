@@ -144,7 +144,16 @@ a {
 
 @media (max-width: 768px) {
     .social-rail {
-        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        transform: none;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        padding: var(--space-sm) 0;
+        gap: 30px;
     }
 }
 
@@ -159,31 +168,28 @@ a {
     gap: clamp(0.75rem, 2vw, 1.75rem);
     max-width: 100%;
     padding-inline: 0.5rem;
-
     font-size: clamp(2.4rem, 5.5vw, 5.6rem);
     letter-spacing: clamp(0.06em, 0.6vw, 0.12em);
     line-height: 1;
-
-    margin-top: clamp(2.5rem, 6vh, 4rem);
-    margin-bottom: clamp(2rem, 4vh, 3rem);
+    margin-top: clamp(6rem, 10vh, 8rem);
+    margin-bottom: clamp(5rem, 8vh, 6rem);
 }
 
 .title-sep {
     font-size: 0.7em;    
     align-self: center;}
 
-/* Keep it one line on typical laptop widths */
 @media (min-width: 900px) and (max-width: 1400px) {
     .site-title {
         flex-wrap: nowrap;
     }
 }
 
-/* Allow it to wrap on small screens */
 @media (max-width: 899px) {
     .site-title {
         flex-wrap: wrap;
         row-gap: 0.25rem;
+        margin-bottom: clamp(2rem, 4vh, 3rem);
     }
 
     .title-sep {
@@ -191,7 +197,6 @@ a {
     }
 }
 
-/* ALSO allow wrap on very wide screens if your letterspacing + font gets huge */
 @media (min-width: 1401px) {
     .site-title {
         flex-wrap: wrap;
@@ -433,9 +438,7 @@ a {
     }
 }
 
-/* =====================================================
-   Responsive (Mobile)
-===================================================== */
+/* ===================================================== Responsive (Mobile) ===================================================== */
 @media (max-width: 768px) {
     .intro-layout {
         grid-template-columns: 1fr;
