@@ -4,26 +4,37 @@ A responsive, accessible portfolio website showcasing design systems, interactiv
 
 ## Overview
 
-This portfolio demonstrates a thoughtful approach to web design with a focus on accessibility, user experience, and clean code architecture. Designed as a single-page portfolio, it requires no scrolling—all essential information is presented within the viewport, creating an immediate and immersive introduction. The site features a dynamic project carousel, social integration, and a multi-page layout with comprehensive styling systems.
+This portfolio demonstrates a thoughtful approach to web design with a focus on accessibility, user experience, and clean code architecture. Designed as a single-page portfolio, it requires no scrolling—all essential information is presented within the viewport, creating an immediate and immersive introduction. The site opens with a dedicated Acknowledgement of Country page before entering the portfolio. Features include a dynamic project carousel, social integration, and intelligent mobile interactions.
 
 ## Features
 
 **Interactive Project Carousel**
-- Smooth transitions and keyboard navigation (arrow keys)
-- Pagination indicators with active state styling
-- Responsive image handling with overlay information
+- Smooth CSS transitions and keyboard navigation (arrow keys)
+- Dynamic pagination indicators with brand color styling
+- Responsive image handling with gradient overlays
+- Project information and call-to-action buttons
+
+**Mobile-Optimized Social Rail**
+- Fixed positioning on desktop (left side, vertically centered)
+- Intelligent scroll behavior on mobile—transitions from top to bottom as user scrolls
+- Smooth transitions and hover effects
+- Email, LinkedIn, and GitHub integration
+
+**Acknowledgement of Country Landing Page**
+- Dedicated landing experience honoring Traditional Custodians
+- Black background with modern typography
+- Call-to-action to enter the portfolio
+
+**Responsive Breakpoints**
+- Optimized for phones 400px and above (stacked title)
+- Tablet layout (768px - 899px)
+- Desktop layout with constrained carousel width for better proportions
 
 **Accessibility First**
 - Semantic HTML structure
 - ARIA labels and roles
 - Keyboard navigable interface
 - High contrast color palette
-
-**Responsive Design**
-- Mobile-optimized layout
-- Flexible grid system using CSS Grid
-- Adaptive typography with clamp functions
-- Touch-friendly interface elements
 
 **Design System**
 - Centralized color tokens and spacing variables
@@ -42,36 +53,64 @@ This portfolio demonstrates a thoughtful approach to web design with a focus on 
 ## Project Structure
 
 ```
-├── index.html          # Main portfolio page
-├── about.html          # About page with skills section
-├── contact-page.html   # Contact information
-├── style.css           # Centralized styling with CSS variables
-├── carousel.js         # Interactive carousel functionality
-├── image/              # Project screenshots and assets
-└── README.md           # This file
+├── acknowledge/
+│   └── index.html      # Acknowledgement of Country landing page
+├── portfolio/
+│   ├── index.html      # Main portfolio page
+│   ├── about.html      # About page with skills section
+│   ├── style.css       # Portfolio styling
+│   ├── carousel.js     # Interactive carousel functionality
+│   ├── social-rail.js  # Mobile scroll behavior
+│   └── image/          # Project screenshots and assets
+├── landing.css         # Landing page styling
+├── README.md           # This file
+└── ...other assets
 ```
 
 ## Key Components
 
+**Landing Page - Acknowledgement of Country**
+Opens the portfolio experience with a dedicated page honoring the Whadjuk people of the Noongar Nation and Traditional Custodians across Australia. Uses a clean black background with Rosario typography.
+
 **Carousel System**
-The project carousel uses vanilla JavaScript to handle slide navigation through arrow keys and dot pagination. Each slide displays project information with a gradient overlay for improved readability.
+The project carousel uses vanilla JavaScript to handle slide navigation through arrow keys and dot pagination. Features three projects with gradient overlays, project descriptions, and external links. Pagination dots use the brand color for the container and action color for inactive dots.
 
-**Social Rail**
-Fixed position navigation with email, LinkedIn, and GitHub links. Responsive behavior adapts layout on mobile devices.
+**Responsive Social Rail**
+Fixed positioning on desktop (left side, vertically centered). On mobile, intelligently transitions from the top to the bottom of the page as the user scrolls, ensuring it stays accessible without obstructing content.
 
-**Design Tokens**
-All colors, spacing, and typography values are managed through CSS custom properties, enabling easy theme adjustments and consistent scaling across the site.
+**Design Tokens System**
+All colors, spacing, and typography values are managed through CSS custom properties across separate stylesheets. This enables easy theme adjustments and consistent scaling across the site.
+
+## Mobile Optimizations
+
+- **Responsive Title**: Stacks vertically on phones 400px and above to prevent text squashing
+- **Flexible Carousel**: Adapts width and height based on viewport size
+- **Social Rail Behavior**: Transitions position on scroll for better accessibility
+- **Touch-Friendly**: All buttons and interactive elements sized for comfortable mobile interaction
 
 ## How It Works
 
-The carousel implementation uses CSS transforms for smooth transitions and maintains state through JavaScript to track the current slide. The responsive grid layout automatically adjusts from a two-column layout on desktop to single column on mobile.
+**Desktop Flow:**
+1. User visits acknowledge/index.html
+2. Clicks "Enter Portfolio" → portfolio/index.html
+3. Explores projects with carousel navigation
+4. Can access about page via about image link
+5. Social rail remains fixed on left side
+
+**Mobile Flow:**
+1. User visits acknowledge/index.html
+2. Clicks "Enter Portfolio" → portfolio/index.html
+3. Scrolls through full-width carousel and content
+4. Social rail automatically moves to bottom as user scrolls
+5. Touch-friendly navigation throughout
 
 ## Future Enhancements
 
 - Automated deployment pipeline
-- Additional case study pages
+- Additional case study pages with detailed project breakdowns
 - Blog section for articles and insights
 - Dark mode toggle
+- Contact form integration
 
 ## Browser Support
 
