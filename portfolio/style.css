@@ -179,10 +179,16 @@ a {
     font-size: 0.7em;    
     align-self: center;}
 
-@media (min-width: 900px) and (max-width: 1400px) {
+@media (min-width: 900px) and (max-width: 1023px) {
     .site-title {
         flex-wrap: nowrap;
         margin-top: clamp(4rem, 6vh, 5rem);
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .site-title {
+        font-size: clamp(3.5rem, 8vw, 5rem);
     }
 }
 
