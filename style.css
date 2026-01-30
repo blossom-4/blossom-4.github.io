@@ -447,6 +447,7 @@ a {
     .project-image-wrapper {
         max-height: none;
         height: auto;
+        min-height: 320px;
     }
 
     .about-image-frame {
