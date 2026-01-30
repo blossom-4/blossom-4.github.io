@@ -1,33 +1,30 @@
-/* ===================================================== Responsive (Mobile) ===================================================== */
-@media (max-width: 768px) {
-    .intro-layout {
-        grid-template-columns: 1fr;
-    }
 
-    .projects-carousel {
-        max-height: none;
-        height: auto;
-        grid-column: auto;
-        grid-row: auto;
-    }
+/* ===================================================== Google Fonts ===================================================== */
+@import url("https://fonts.googleapis.com/css2?family=Sancreek&family=Rosario:wght@300;400;500&display=swap");
 
-    .project-image-wrapper {
-        max-height: none;
-        height: auto;
-        min-height: 320px;
-    }
+/* ===================================================== Design Tokens ===================================================== */
+:root {
+    --brand: #AAC0E7;
+    --action: #273C75;
+    --action-dark: #1e2b55;
+    --white: #F3F5F2;
+    --base-light: #D3E9FD;
+    --base-dark: #555A6B;
+    --black: #111111;
 
-    .about-image-frame {
-        max-width: 250px;
-        max-height: 250px;
-        height: auto;
-        width: 100%;
-        margin: 0 auto;
-    }
+    --text-sm: 0.9rem;
+    --text-base: 1rem;
+    --text-lg: 1.25rem;
+    --text-xl: 2rem;
+    --text-xxl: 2.75rem;
 
-    body {
-        overflow-y: auto;
-    }
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 32px;
+    --space-lg: 64px;
+
+    --font-display: "Sancreek", serif;
+    --font-body: "Rosario", sans-serif;
 }
 
 /* ===================================================== Landing Page ===================================================== */
@@ -60,25 +57,28 @@
 
 .acknowledgement {
     color: var(--white);
+    font-family: var(--font-body);
 }
 
 .acknowledgement h1 {
-    color: var(--white);
+    color: #FFFF00;
     font-size: var(--text-xl);
     margin-bottom: var(--space-md);
+    font-family: var(--font-body);
 }
 
 .acknowledgement p {
-    color: var(--white);
-    font-size: var(--text-base);
+    color: #FFFF00;
+    font-size: var(--text-lg);
     line-height: 1.8;
     max-width: 600px;
+    font-family: var(--font-body);
 }
 
 .landing-button {
     padding: var(--space-sm) var(--space-md);
-    background: var(--white);
-    color: var(--action);
+    background: #CC0000;
+    color: #FFFF00;
     border-radius: 999px;
     font-size: var(--text-base);
     border: none;
@@ -87,9 +87,10 @@
     display: inline-block;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     font-weight: 500;
+    pointer-events: auto;
+    font-family: var(--font-body);
 }
 
 .landing-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(255, 255, 255, 0.25);
 }
