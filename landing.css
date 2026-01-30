@@ -1,0 +1,95 @@
+/* ===================================================== Responsive (Mobile) ===================================================== */
+@media (max-width: 768px) {
+    .intro-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-carousel {
+        max-height: none;
+        height: auto;
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .project-image-wrapper {
+        max-height: none;
+        height: auto;
+        min-height: 320px;
+    }
+
+    .about-image-frame {
+        max-width: 250px;
+        max-height: 250px;
+        height: auto;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    body {
+        overflow-y: auto;
+    }
+}
+
+/* ===================================================== Landing Page ===================================================== */
+.landing-page {
+    background-color: var(--black);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.landing-container {
+    width: 100%;
+    max-width: 800px;
+    padding: var(--space-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    align-items: center;
+}
+
+.acknowledgement {
+    color: var(--white);
+}
+
+.acknowledgement h1 {
+    color: var(--white);
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-md);
+}
+
+.acknowledgement p {
+    color: var(--white);
+    font-size: var(--text-base);
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+.landing-button {
+    padding: var(--space-sm) var(--space-md);
+    background: var(--white);
+    color: var(--action);
+    border-radius: 999px;
+    font-size: var(--text-base);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    font-weight: 500;
+}
+
+.landing-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(255, 255, 255, 0.25);
+}
