@@ -320,10 +320,7 @@ a {
     flex-direction: column;
     justify-content: flex-start;
 
-    background: linear-gradient(to top,
-            rgba(39, 60, 117, 0.85),
-            rgba(39, 60, 117, 0.55),
-            rgba(39, 60, 117, 0.15));
+    background: rgba(39, 60, 117, 0.9);
 
     color: var(--white);
 }
@@ -445,10 +442,17 @@ a {
     }
 
     .projects-carousel,
-    .project-image-wrapper,
-    .about-image-frame {
+    .project-image-wrapper {
         max-height: none;
         height: auto;
+    }
+
+    .about-image-frame {
+        max-width: 250px;
+        max-height: 250px;
+        height: auto;
+        width: 100%;
+        margin: 0 auto;
     }
 
     body {
