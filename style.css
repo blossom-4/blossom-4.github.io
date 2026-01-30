@@ -127,7 +127,7 @@ a {
     background: none;
     border: none;
     cursor: pointer;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
     padding: 0;
@@ -145,10 +145,6 @@ a {
 @media (max-width: 768px) {
     .social-rail {
         display: none;
-    }
-
-    .menu-toggle {
-        display: flex;
     }
 }
 
