@@ -158,7 +158,7 @@ a {
     .social-rail {
         display: none;
     }
-    
+
     .menu-toggle {
         display: flex;
     }
@@ -170,15 +170,57 @@ a {
 .site-title {
     font-family: var(--font-display);
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    text-align: center;
-    white-space: nowrap;
+    color: var(--action);
 
-    font-size: clamp(2.6rem, 7vw, 6rem);
-    margin-top: clamp(2.5rem, 6vh, 4rem);
-    margin-bottom: clamp(2rem, 5vh, 3.5rem);
+    /* flexible title layout */
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: clamp(0.75rem, 2vw, 1.75rem);
 
+    /* this prevents clipping inside the 1100px container */
+    max-width: 100%;
+    padding-inline: 0.5rem;
+
+    font-size: clamp(2.4rem, 5.5vw, 5.6rem);
+    letter-spacing: clamp(0.06em, 0.6vw, 0.12em);
     line-height: 1;
+
+    margin-top: clamp(2.5rem, 6vh, 4rem);
+    margin-bottom: clamp(2rem, 4vh, 3rem);
+}
+
+/* Keep it one line on typical laptop widths */
+@media (min-width: 900px) and (max-width: 1400px) {
+    .site-title {
+        flex-wrap: nowrap;
+    }
+}
+
+/* Allow it to wrap on small screens */
+@media (max-width: 899px) {
+    .site-title {
+        flex-wrap: wrap;
+        row-gap: 0.25rem;
+    }
+
+    .title-sep {
+        display: none;
+    }
+
+    /* optional: cleaner on mobile */
+}
+
+/* ALSO allow wrap on very wide screens if your letterspacing + font gets huge */
+@media (min-width: 1401px) {
+    .site-title {
+        flex-wrap: wrap;
+    }
+
+    .title-first,
+    .title-last {
+        display: inline-block;
+    }
 }
 
 /* =====================================================
