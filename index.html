@@ -27,81 +27,85 @@
 
     <div class="page-container">
 
-        <!-- Navbar -->
-        <header>
-            <button class="menu-toggle" aria-label="Open menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+        <!-- Header / Navbar -->
+        <header class="top-bar"></header>
+
+        <button class="menu-toggle" aria-label="Open menu">
+            <span></span>
+            <span></span>
+        </button>
         </header>
+        <main class="main">
+            <h1 class="site-title">
+                <span class="title-first">Blossom</span>
+                <span class="title-sep" aria-hidden="true">★</span>
+                <span class="title-last">Herbison</span>
+            </h1>
 
-        <!-- Site Title -->
-        <h1 class="site-title">Blossom * Herbison</h1>
+            <!-- Hero Section -->
+            <section class="intro-layout">
 
-        <!-- Hero Section -->
-        <section class="intro-layout">
+                <!-- About Image-->
+                <a href="about.html" class="about-image-link">
+                    <div class="about-image-frame">
+                        <img src="image/bio_photo.jpg" alt="Portrait of Blossom Herbison" class="about-image" />
+                    </div>
+                </a>
 
-            <!-- About Image-->
-            <a href="about.html" class="about-image-link">
-                <div class="about-image-frame">
-                    <img src="image/bio_photo.jpg" alt="Portrait of Blossom Herbison" class="about-image" />
-                </div>
-            </a>
-
-            <!-- Projects Carousel -->
-            <section id="projects" class="projects-carousel">
-                <div class="carousel-track">
-                    <!-- Project 1 -->
-                    <article class="project-slide">
-                        <div class="project-image-wrapper">
-                            <img src="image/github_website.png"
-                                alt="Screenshot of GitHub repositry for portfolio website" class="project-image" />
-                            <div class="project-overlay">
-                                <h3>Portfolio Website</h3>
-                                <p>
-                                    A responsive portfolio showcasing technical skills, layout
-                                    systems, and accessibility-first thinking.
-                                </p>
-                                <ul>
-                                    <li>HTML, CSS, JavaScript</li>
-                                    <li>Accessibility · Design systems · Interaction</li>
-                                </ul>
-                                <a href="https://github.com/blossom-4/blossom-4.github.io" class="button"
-                                    target="_blank">View GitHub
-                                </a>
+                <!-- Projects Carousel -->
+                <section id="projects" class="projects-carousel" aria-label="Projects">
+                    <div class="carousel-track">
+                        <!-- Project 1 -->
+                        <article class="project-slide">
+                            <div class="project-image-wrapper">
+                                <img src="image/github_website.png"
+                                    alt="Screenshot of GitHub repositry for portfolio website" class="project-image" />
+                                <div class="project-overlay">
+                                    <h3>Portfolio Website</h3>
+                                    <p>
+                                        A responsive portfolio showcasing technical skills, layout
+                                        systems, and accessibility-first thinking.
+                                    </p>
+                                    <ul>
+                                        <li>HTML, CSS, JavaScript</li>
+                                        <li>Accessibility · Design systems · Interaction</li>
+                                    </ul>
+                                    <a href="https://github.com/blossom-4/blossom-4.github.io" class="button"
+                                        target="_blank">View GitHub
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                    </article>
+                        </article>
 
-                    <!-- Project 2 -->
-                    <article class="project-slide">
-                        <div class="project-image-wrapper">
-                            <img src="image/raise_the_case.png" alt="Screenshot of Raise the Case homepage"
-                                class="project-image" />
-                            <div class="project-overlay">
-                                <h3>Raise the Case</h3>
-                                <p>
-                                    A community-driven justice platform enabling users to review,
-                                    debate, and judge real cases.
-                                </p>
-                                <ul>
-                                    <li>Product ideation · UX · Frontend</li>
-                                    <li>User trust · Moderation · Data ethics</li>
-                                </ul>
-                                <a href="https://raise-the-case.netlify.app/" class="button" target="_blank">View App
-                                </a>
+                        <!-- Project 2 -->
+                        <article class="project-slide">
+                            <div class="project-image-wrapper">
+                                <img src="image/raise_the_case.png" alt="Screenshot of Raise the Case homepage"
+                                    class="project-image" />
+                                <div class="project-overlay">
+                                    <h3>Raise the Case</h3>
+                                    <p>
+                                        A community-driven justice platform enabling users to review,
+                                        debate, and judge real cases.
+                                    </p>
+                                    <ul>
+                                        <li>Product ideation · UX · Frontend</li>
+                                        <li>User trust · Moderation · Data ethics</li>
+                                    </ul>
+                                    <a href="https://raise-the-case.netlify.app/" class="button" target="_blank">View
+                                        App
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                    </article>
-                </div>
+                        </article>
+                    </div>
 
-                <!-- Pagination dots -->
-                <div class="carousel-dots">
-                    <button class="active" aria-label="Project 1" data-index="0"></button>
-                    <button aria-label="Project 2" data-index="1"></button>
-                </div>
-            </section>
+                    <!-- Pagination dots -->
+                    <div class="carousel-dots">
+                        <button class="active" aria-label="Project 1" data-index="0"></button>
+                        <button aria-label="Project 2" data-index="1"></button>
+                    </div>
+                </section>
     </div>
 </body>
 <script src="carousel.js"></script>
