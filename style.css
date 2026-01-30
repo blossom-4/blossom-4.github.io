@@ -319,9 +319,7 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
-    background: rgba(39, 60, 117, 0.9);
-
+    background: linear-gradient(to bottom, rgba(170, 192, 231, 0.9), rgba(39, 60, 117, 0.9));
     color: var(--white);
 }
 
