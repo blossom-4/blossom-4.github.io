@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blossom Herbison Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <!-- Social Icon Rail -->
+    <nav class="social-rail" aria-label="Social media links">
+        <a href="mailto:eliza.herbison94@gmail.com" aria-label="Email" title="Email">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="https://linkedin.com/in/eliza-herbison-102954169" target="_blank" aria-label="LinkedIn"
+            title="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://github.com/blossom-4" target="_blank" aria-label="GitHub" title="GitHub">
+            <i class="fa-brands fa-github"></i>
+        </a>
+    </nav>
+
+    <div class="page-container">
+
+        <!-- Header / Navbar -->
+        <!-- <header class="top-bar">
+            <button class="menu-toggle" aria-label="Open menu">
+                <span></span>
+                <span></span>
+            </button>
+        </header> -->
+
+        <main class="main">
+            <h1 class="site-title">
+                <span class="title-first">Blossom</span>
+                <span class="title-sep" aria-hidden="true">★</span>
+                <span class="title-last">Herbison</span>
+            </h1>
+
+            <!-- Hero Section -->
+            <section class="intro-layout">
+
+                <!-- About Image-->
+                <a href="about.html" class="about-image-link">
+                    <div class="about-image-frame">
+                        <img src="image/bio_photo.jpg" alt="Portrait of Blossom Herbison" class="about-image" />
+                    </div>
+                </a>
+
+                <!-- Projects Carousel -->
+                <section id="projects" class="projects-carousel" aria-label="Projects">
+                    <div class="carousel-track">
+                        <!-- Project 1 -->
+                        <article class="project-slide">
+                            <div class="project-image-wrapper">
+                                <img src="image/github_website.png"
+                                    alt="Screenshot of GitHub repositry for portfolio website" class="project-image" />
+                                <div class="project-overlay">
+                                    <h3>Portfolio Website</h3>
+                                    <p>
+                                        A responsive portfolio showcasing technical skills, modern layout
+                                        systems, thoughtful design and accessibility-first thinking.
+                                    </p>
+                                    <ul>
+                                        <li>★ Functionality · Design systems · Interaction ★</li>
+                                    </ul>
+                                    <a href="https://github.com/blossom-4/blossom-4.github.io" class="button"
+                                        target="_blank">View GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Project 2 -->
+                        <article class="project-slide">
+                            <div class="project-image-wrapper">
+                                <img src="image/raise_the_case.png" alt="Screenshot of Raise the Case homepage"
+                                    class="project-image" />
+                                <div class="project-overlay">
+                                    <h3>Raise the Case</h3>
+                                    <p>
+                                        A community-driven justice platform enabling users to review,
+                                        debate, and judge real cases.
+                                    </p>
+                                    <ul>
+                                        <li>★ Progress Indicator · Grid Layout · Social Sharing ★</li>
+                                    </ul>
+                                    <a href="https://raise-the-case.netlify.app/" class="button" target="_blank">View
+                                        App
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- Project 3 -->
+                        <article class="project-slide">
+                            <div class="project-image-wrapper">
+                                <img src="image/team_pulse_manager_dash.png" alt="Screenshot of Team Pulse App"
+                                    class="project-image" />
+                                <div class="project-overlay">
+                                    <h3>Team Pulse</h3>
+                                    <p>
+                                        An mobile-first app for remote teams to check-in on mood and workload each week. 
+                                        With dashboards to track team wellbeing and early signs of burnout.
+                                    </p>
+                                    <ul>
+                                        <li>★ Data Visualisation · Gamification · Survey Forms ★</li>
+                                    </ul>
+                                    <a href="https://teampulse-app.netlify.app/" class="button" target="_blank">View
+                                        App
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Pagination dots -->
+                    <div class="carousel-dots">
+                        <button class="active" aria-label="Project 1" data-index="0"></button>
+                        <button aria-label="Project 2" data-index="1"></button>
+                        <button aria-label="Project 3" data-index="2"></button>
+                    </div>
+                </section>
+            </section>
+        </main>
+    </div>
+</body>
+<script src="carousel.js"></script>
+
+</html>
