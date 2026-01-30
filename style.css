@@ -152,15 +152,11 @@ a {
 .site-title {
     font-family: var(--font-display);
     text-transform: uppercase;
-    color: var(--action);
-
-    /* flexible title layout */
+    color: var(--brand);
     display: flex;
     justify-content: center;
     align-items: baseline;
     gap: clamp(0.75rem, 2vw, 1.75rem);
-
-    /* this prevents clipping inside the 1100px container */
     max-width: 100%;
     padding-inline: 0.5rem;
 
@@ -171,6 +167,10 @@ a {
     margin-top: clamp(2.5rem, 6vh, 4rem);
     margin-bottom: clamp(2rem, 4vh, 3rem);
 }
+
+.title-sep {
+    font-size: 0.7em;    
+    align-self: center;}
 
 /* Keep it one line on typical laptop widths */
 @media (min-width: 900px) and (max-width: 1400px) {
@@ -189,8 +189,6 @@ a {
     .title-sep {
         display: none;
     }
-
-    /* optional: cleaner on mobile */
 }
 
 /* ALSO allow wrap on very wide screens if your letterspacing + font gets huge */
@@ -205,9 +203,7 @@ a {
     }
 }
 
-/* =====================================================
-   Intro Layout (Hero)
-===================================================== */
+/* ===================================================== Intro Layout (Hero) ===================================================== */
 .intro-layout {
     display: grid;
     grid-template-columns: 320px 1fr;
@@ -218,9 +214,7 @@ a {
     margin-bottom: var(--space-lg);
 }
 
-/* =====================================================
-   About Image
-===================================================== */
+/* ===================================================== About Image ===================================================== */
 .about-image-link {
     display: block;
     position: relative;
@@ -282,9 +276,7 @@ a {
     opacity: 1;
 }
 
-/* =====================================================
-   Projects Carousel
-===================================================== */
+/* ===================================================== Projects Carousel ===================================================== */
 .projects-carousel {
     position: relative;
     max-height: 360px;
@@ -314,9 +306,7 @@ a {
     object-fit: cover;
 }
 
-/* =====================================================
-   Project Overlay
-===================================================== */
+/* ===================================================== Project Overlay ===================================================== */
 .project-overlay {
     position: absolute;
     inset: 0;
@@ -346,9 +336,7 @@ a {
     font-size: var(--text-sm);
 }
 
-/* =====================================================
-   Buttons
-===================================================== */
+/* ===================================================== Buttons ===================================================== */
 .button {
     margin-top: auto;
     align-self: flex-start;
@@ -359,9 +347,7 @@ a {
     font-size: var(--text-sm);
 }
 
-/* =====================================================
-   Pagination Dots
-===================================================== */
+/* ===================================================== Pagination Dots ===================================================== */
 .carousel-dots {
     position: absolute;
     bottom: 14px;
