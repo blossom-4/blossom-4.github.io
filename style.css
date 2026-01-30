@@ -197,6 +197,12 @@ a {
     }
 }
 
+@media (max-width: 768px) {
+    .site-title {
+        color: var(--action);
+    }
+}
+
 @media (min-width: 1401px) {
     .site-title {
         flex-wrap: wrap;
