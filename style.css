@@ -441,7 +441,11 @@ a {
         grid-template-columns: 1fr;
     }
 
-    .projects-carousel,
+    .projects-carousel {
+        max-height: none;
+        height: auto;
+    }
+
     .project-image-wrapper {
         max-height: none;
         height: auto;
