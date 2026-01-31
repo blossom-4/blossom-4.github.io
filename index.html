@@ -6,104 +6,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blossom Herbison Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../landing.css">
 </head>
 
-<body>
-    <!-- Social Icon Rail -->
-    <nav class="social-rail" aria-label="Social media links">
-        <a href="mailto:eliza.herbison94@gmail.com" aria-label="Email" title="Email">
-            <i class="fa-solid fa-envelope"></i>
-        </a>
-        <a href="https://linkedin.com/in/eliza-herbison-102954169" target="_blank" aria-label="LinkedIn"
-            title="LinkedIn">
-            <i class="fa-brands fa-linkedin-in"></i>
-        </a>
-        <a href="https://github.com/blossom-4" target="_blank" aria-label="GitHub" title="GitHub">
-            <i class="fa-brands fa-github"></i>
-        </a>
-    </nav>
-
-    <div class="page-container">
-
-        <!-- Navbar -->
-        <header>
-            <button class="menu-toggle" aria-label="Open menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </header>
-
-        <!-- Site Title -->
-        <h1 class="site-title">Blossom * Herbison</h1>
-
-        <!-- Hero Section -->
-        <section class="intro-layout">
-
-            <!-- About Image-->
-            <a href="about.html" class="about-image-link">
-                <div class="about-image-frame">
-                    <img src="image/bio_photo.jpg" alt="Portrait of Blossom Herbison" class="about-image" />
-                </div>
-            </a>
-
-            <!-- Projects Carousel -->
-            <section id="projects" class="projects-carousel">
-                <div class="carousel-track">
-                    <!-- Project 1 -->
-                    <article class="project-slide">
-                        <div class="project-image-wrapper">
-                            <img src="image/github_website.png"
-                                alt="Screenshot of GitHub repositry for portfolio website" class="project-image" />
-                            <div class="project-overlay">
-                                <h3>Portfolio Website</h3>
-                                <p>
-                                    A responsive portfolio showcasing technical skills, layout
-                                    systems, and accessibility-first thinking.
-                                </p>
-                                <ul>
-                                    <li>HTML, CSS, JavaScript</li>
-                                    <li>Accessibility · Design systems · Interaction</li>
-                                </ul>
-                                <a href="https://github.com/blossom-4/blossom-4.github.io" class="button"
-                                    target="_blank">View GitHub
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- Project 2 -->
-                    <article class="project-slide">
-                        <div class="project-image-wrapper">
-                            <img src="image/raise_the_case.png" alt="Screenshot of Raise the Case homepage"
-                                class="project-image" />
-                            <div class="project-overlay">
-                                <h3>Raise the Case</h3>
-                                <p>
-                                    A community-driven justice platform enabling users to review,
-                                    debate, and judge real cases.
-                                </p>
-                                <ul>
-                                    <li>Product ideation · UX · Frontend</li>
-                                    <li>User trust · Moderation · Data ethics</li>
-                                </ul>
-                                <a href="https://raise-the-case.netlify.app/" class="button" target="_blank">View App
-                                </a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-
-                <!-- Pagination dots -->
-                <div class="carousel-dots">
-                    <button class="active" aria-label="Project 1" data-index="0"></button>
-                    <button aria-label="Project 2" data-index="1"></button>
-                </div>
-            </section>
+<body class="landing-page">
+    <div class="landing-container">
+        <div class="landing-content">
+            <div class="acknowledgement">
+                <h1>Acknowledgement of Country</h1>
+                <p>
+                    We acknowledge the Whadjuk people of the Noongar Nation as the Traditional Custodians of the land 
+                    on which we are located. We also acknowledge the Traditional Owners of Country throughout Australia 
+                    and recognise their continuing connection to land, waters, and community. We pay our respects to 
+                    Elders past and present and extend that respect to all Aboriginal and Torres Strait Islander 
+                    peoples today.
+                </p>
+            </div>
+            <a href="../portfolio/index.html" class="landing-button">Enter</a>
+        </div>
     </div>
 </body>
-<script src="carousel.js"></script>
 
 </html>
