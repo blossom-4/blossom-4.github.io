@@ -61,14 +61,14 @@
 }
 
 .acknowledgement h1 {
-    color: #FFFF00;
+    color: #F3F5F2;
     font-size: var(--text-xl);
     margin-bottom: var(--space-md);
     font-family: var(--font-body);
 }
 
 .acknowledgement p {
-    color: #FFFF00;
+    color: #F3F5F2;
     font-size: var(--text-lg);
     line-height: 1.8;
     max-width: 600px;
@@ -77,8 +77,8 @@
 
 .landing-button {
     padding: var(--space-sm) var(--space-md);
-    background: #CC0000;
-    color: #FFFF00;
+    background: #AAC0E7;
+    color: #273C75;
     border-radius: 999px;
     font-size: var(--text-base);
     border: none;
@@ -86,7 +86,7 @@
     text-decoration: none;
     display: inline-block;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
-    font-weight: 500;
+    font-weight: bold;
     pointer-events: auto;
     font-family: var(--font-body);
 }

@@ -2,18 +2,18 @@
 A responsive, accessible portfolio website showcasing design systems, interactive components, and frontend development expertise.
 
 ## Overview
-This portfolio demonstrates a thoughtful approach to web design with a focus on accessibility, user experience, and clean code architecture. Designed as a single-page portfolio, it requires no scrolling—all essential information is presented within the viewport, creating an immediate and immersive introduction. The site opens with a dedicated Acknowledgement of Country page before entering the portfolio. Features include a dynamic project carousel, social integration, and intuative mobile interactions.
+This portfolio demonstrates a thoughtful approach to web design with a focus on accessibility, user experience, and clean code architecture. Designed as a single-page portfolio, it requires no scrolling—all essential information is presented within the viewport, creating an immediate and immersive introduction. The site opens with a dedicated Acknowledgement of Country page before entering the portfolio. Features include a dynamic project carousel, social integration, and intuitive mobile interactions.
 
 ## Features
 **Interactive Project Carousel**
 - Smooth CSS transitions and keyboard navigation (arrow keys)
-- Dynamic pagination indicators with brand color styling
+- Dynamic pagination indicators with brand colour styling
 - Responsive image handling with gradient overlays
 - Project information and call-to-action buttons
 
 **Social Rail**
 - Fixed positioning on desktop (left side, vertical)
-- Intuative scroll behavior on mobile (transitions from top to bottom as user scrolls)
+- Intuitive scroll behaviour on mobile (transitions from top to bottom as user scrolls)
 - Hover effects
 - Email, LinkedIn, and GitHub integration
 
@@ -30,7 +30,7 @@ This portfolio demonstrates a thoughtful approach to web design with a focus on 
 **Accessibility First**
 - Semantic HTML structure
 - ARIA labels and roles
-- Keyboard navigaation
+- Keyboard navigation
 - High contrast colour palette - especially on mobile
 
 **Design System**
@@ -53,9 +53,9 @@ This portfolio demonstrates a thoughtful approach to web design with a focus on 
 ├── portfolio/
 │   ├── index.html      # Main portfolio page
 │   ├── about.html      # About page with skills section
-│   ├── style.css       # Centeralised brand and styling
+│   ├── style.css       # Centralised brand and styling
 │   ├── carousel.js     # Interactive carousel 
-│   ├── social-rail.js  # Mobile scroll behavior
+│   ├── social-rail.js  # Mobile scroll behaviour
 │   └── image/          # Project screenshots and bio pic
 └── README.md           # Project Description
 
@@ -76,7 +76,7 @@ All colours, spacing, and typography values are managed through CSS custom prope
 ## Mobile Optimisations
 - **Responsive Title**: Stacks vertically on phones 400px and above to prevent text squashing also changes to action colour for higher contrast on smaller screens.
 - **Flexible Carousel**: Adapts width and height based on viewport size
-- **Social Rail Behavior**: Transitions position on scroll for better accessibility in mobile view.
+- **Social Rail Behaviour**: Transitions position on scroll for better accessibility in mobile view.
 - **Touch-Friendly**: All buttons and interactive elements sized for comfortable mobile interaction with animation and cursor adaptation
 
 ## How It Works
